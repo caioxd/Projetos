@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMC</title>
+  <link rel="stylesheet" href="style.css">
+  <img src="https://conteudo.imguol.com.br/c/noticias/07/2020/01/02/arte-para-o-tec-por-tras-da-calculadora-1577992106273_v2_1200x1200.jpg" alt="">
+  
+  <style>
+    .warning {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>Cálculo IMC</h2>
+    <div class="divAltura">
+      <label for="altura">Altura (M)</label>
+       <input id="altura" placeholder="Digite a Sua Altura" type="number" oninput="validateData()">
+       <span id="heightWarning" class="warning"></span>
+    </div>
+    <div class="divPeso">
+      <label for="peso">Peso (KG)</label>
+      <input id="peso" placeholder="Digite o Seu Peso" type="number" oninput="validateData()">
+      <span id="weightWarning" class="warning"></span>
+    </div>
+
+    <div class="divCalc">
+      <button onclick="calcIMC()">Calcular</button>
+    </div>
+
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+
+    <script src="script.js"></script>
+  </main>
+</body>
+</html>
